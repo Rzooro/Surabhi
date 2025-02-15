@@ -1,0 +1,33 @@
+.scroller-container {
+  display: flex;
+  overflow: hidden;
+  height: 200px; /* Adjust based on your logo size */
+}
+
+.scroller-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scroller-inner {
+  animation: scroll 10s linear infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Adjust based on your logo size */
+  margin: 10px 0; /* Adjust based on your spacing preference */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

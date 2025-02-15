@@ -1,0 +1,7 @@
+.petal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center 22rem;
+}
