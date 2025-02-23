@@ -44,7 +44,7 @@ const Saniha = () => {
   return (
     <>
       <div
-        className={`mt-[5.1rem] bg-cover flex flex-col justify-center h-[32rem]`}
+        className={`mt-[4rem] lap:mt-[5.1rem] bg-cover flex flex-col justify-center h-[24rem] lap:h-[32rem]`}
         style={{
           backgroundImage: `linear-gradient(rgba(67,56,202,0.55), rgba(67,56,202,0.55)), url(${H})`,
         }}>
@@ -53,21 +53,21 @@ const Saniha = () => {
           className={`flex items-center gap-1 z-50 transition-all duration-300 w-full justify-center py-2
              ${
                isFixed
-                 ? `fixed top-0 left-0 right-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[5.1rem]" : ""}`
+                 ? `fixed top-0 left-0 right-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[4rem] lap:translate-y-[5.1rem]" : ""}`
                  : ""
              }`}>
           <div className="h-0.5 bg-amber-600 w-2/3"></div>
-          <h1 className="text-8xl whitespace-nowrap text-amber-600 font-Fira_Sans_Condensed font-bold">
+          <h1 className="text-6xl lap:text-8xl whitespace-nowrap text-amber-600 font-Fira_Sans_Condensed font-bold">
             Surabhi Saniha
           </h1>
           <div className="h-0.5 bg-amber-600 w-2/3"></div>
         </div>
       </div>
       <div className="flex flex-col gap-5 py-2 items-center">
-        <h1 className="font-bold font-Oswald tracking-tight text-amber-600 text-6xl -translate-x-[20rem]">
+        <h1 className="font-bold font-Oswald tracking-tight text-amber-600 text-4xl lap:text-6xl lap:-translate-x-[20rem]">
           BRIGHTER FUTURES
         </h1>
-        <p className="font-Lato tracking-tight w-[60rem] font-bold text-2xl">
+        <p className="font-Lato tracking-tight w-[95%] lap:w-[60rem] font-bold text-xl lap:text-2xl">
           Surabhi Foundation Trust is committed to identifying and empowering
           disregarded villages, fostering self-sustainability through community
           engagement. Our focus is on holistic development, addressing
@@ -76,33 +76,33 @@ const Saniha = () => {
         </p>
       </div>
       <div className="flex flex-col items-center gap-5 my-10">
-        <div className="flex flex-col w-[55rem] bg-indigo-700 rounded-xl p-6 sticky top-32 gap-2">
-          <h1 className="text-4xl text-amber-600 font-Oswald font-bold">
+        <div className="flex flex-col w-[95%] lap:w-[55rem] bg-indigo-700 rounded-xl p-6 sticky top-32 gap-2">
+          <h1 className="text-3xl lap:text-4xl text-amber-600 font-Oswald font-bold">
             INFRASTRUCTURE DEVELOPMENT
           </h1>
-          <p className="w-[45rem] font-Lato text-xl">
+          <p className="w-[95%] lap:w-[45rem] font-Lato lap:text-xl">
             We are actively involved in constructing additional classrooms,
             libraries, and science laboratories to expand capacity and improve
             facilities in government schools. Our aim is to create modern and
             well-equipped learning spaces that foster creativity and innovation.
           </p>
         </div>
-        <div className="flex flex-col w-[55rem] bg-indigo-600 rounded-xl p-6 sticky top-48 gap-2">
-          <h1 className="text-4xl text-amber-600 font-Oswald font-bold">
+        <div className="flex flex-col w-[95%] lap:w-[55rem] bg-indigo-600 rounded-xl p-6 sticky top-48 gap-2">
+          <h1 className="text-3xl lap:text-4xl text-amber-600 font-Oswald font-bold">
             CULTURAL EXCHANGE
           </h1>
-          <p className="w-[45rem] font-Lato text-xl">
+          <p className="w-[95%] lap:w-[45rem] font-Lato lap:text-xl">
             Our annual Surabhi Chinara Sambrama brings together thousands of
             students from various government schools for a vibrant cultural
             exchange. This event showcases the diverse talents of students,
             promotes unity, and fosters a sense of community.
           </p>
         </div>
-        <div className="flex flex-col w-[55rem] bg-indigo-500 rounded-xl p-6 sticky top-[16rem] gap-2">
-          <h1 className="text-4xl text-amber-500 font-Oswald font-bold">
+        <div className="flex flex-col w-[95%] lap:w-[55rem] bg-indigo-500 rounded-xl p-6 sticky top-[16rem] gap-2">
+          <h1 className="text-3xl lap:text-4xl text-amber-500 font-Oswald font-bold">
             CAMPUS BEAUTIFICATION
           </h1>
-          <p className="w-[45rem] font-Lato text-xl">
+          <p className="w-[95%] lap:w-[45rem] font-Lato lap:text-xl">
             We believe in creating inspiring and aesthetically pleasing learning
             environments. Our initiatives include planting trees, setting up
             gardens, and painting school walls with vibrant colors. These
@@ -110,11 +110,11 @@ const Saniha = () => {
             contribute to a positive and uplifting atmosphere.
           </p>
         </div>
-        <div className="flex flex-col w-[55rem] bg-[#7480f5] rounded-xl p-6 sticky top-[20rem] gap-2">
-          <h1 className="text-4xl text-amber-500 font-Oswald font-bold">
+        <div className="flex flex-col w-[95%] lap:w-[55rem] bg-[#7480f5] rounded-xl p-6 sticky top-[20rem] gap-2">
+          <h1 className="text-3xl lap:text-4xl text-amber-500 font-Oswald font-bold">
             RESOURCE ENHANCEMENT
           </h1>
-          <p className="w-[45rem] font-Lato text-xl">
+          <p className="w-[95%] lap:w-[45rem] font-Lato lap:text-xl">
             We provide essential educational resources, such as books,
             stationery, and digital learning tools, to ensure students have the
             necessary materials for their studies. Our goal is to bridge the
@@ -124,10 +124,10 @@ const Saniha = () => {
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <h1 className="text-6xl text-amber-600 font-Fira_Sans_Condensed font-bold mb-5">
+        <h1 className="text-4xl lap:text-6xl text-amber-600 font-Fira_Sans_Condensed font-bold mb-5">
           Impact
         </h1>
-        <p className="font-Lato font-bold text-2xl tracking-tight w-[60rem] text-center">
+        <p className="font-Lato font-bold text-xl lap:text-2xl tracking-tight w-[95%] lap:w-[60rem] text-center">
           Surabhi Saniha has made a significant difference in the lives of
           government school students. Our initiatives have improved learning
           environments, fostered a sense of community, and provided
@@ -136,10 +136,10 @@ const Saniha = () => {
       </div>
       <div className="h-96"></div>
       <div className="flex flex-col items-center gap-5 py-14">
-        <h1 className="text-6xl text-amber-600 font-Fira_Sans_Condensed font-bold">
+        <h1 className="text-4xl lap:text-6xl text-amber-600 font-Fira_Sans_Condensed font-bold">
           MAKE A DIFFERENCE
         </h1>
-        <p className="font-Lato tracking-tight w-[60rem] text-center font-bold text-2xl">
+        <p className="font-Lato tracking-tight w-[95%] lap:w-[60rem] text-center font-bold text-xl lap:text-2xl">
           Your support is vital in ensuring the continued success of our school
           outreach program. <br />
           <span className="text-indigo-600">
