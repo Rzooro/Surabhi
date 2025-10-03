@@ -40,7 +40,7 @@ const AboutUs = () => {
       <div className="relative flex flex-col mb-20">
         <div className="h-16 min-w-[100%] bg-white bg-opacity-40 backdrop-blur-md fixed top-16 left-0 lap:invisible"></div>
         <div
-          className="fixed flex lap:flex-col top-16 left-6 translate-y-[20%] desk:translate-y-[65%] lap:translate-y-[50%] desk:left-12 lap:left-10 
+          className="fixed flex lap:flex-col top-4 left-6 translate-y-[20%] desk:translate-y-[65%] lap:translate-y-[50%] desk:left-12 lap:left-10 
           lap:min-h-96 lap:w-1 lap:bg-lime-600 rounded-lg z-10
                         desk:scale-125">
           <div className="h-1 min-w-[22rem] bg-lime-600 absolute top-6 left-2 lap:invisible"></div>

@@ -53,7 +53,7 @@ const Arogya = () => {
           className={`flex items-center gap-1 z-50 transition-all duration-300 w-full justify-center py-2
              ${
                isFixed
-                 ? `fixed top-0 left-0 right-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[4rem] lap:translate-y-[5.1rem]" : ""}`
+                 ? `fixed top-0 left-0 rig``ht-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[4rem] lap:translate-y-[5.1rem]" : ""}`
                  : ""
              }`}>
           <div className="h-0.5 bg-green-500 w-2/3"></div>

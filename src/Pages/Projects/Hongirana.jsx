@@ -215,7 +215,6 @@ const Hongirana = () => {
           </div>
         </div>
       </div>
-      <div className="h-[500px]"></div>
       <div className="flex flex-col items-center py-10 gap-8">
         <p className="font-Lato font-bold lap:text-lg w-[95%] lap:w-[58rem]">
           Your generous donation will help us complete the construction of

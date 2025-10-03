@@ -145,7 +145,6 @@ const Vidya = () => {
           </div>
         </div>
       </div>
-      <div className="h-[500px]"></div>
       <div className="flex flex-col items-center gap-5 py-14">
         <p className="font-Lato font-bold w-[95%] lap:w-[45rem] text-lg">
           Your generous support can help us expand Vidya Surabhi's reach and

@@ -112,7 +112,6 @@ const Grama = () => {
           </p>
         </div>
       </div>
-      <div className="h-96"></div>
       <div className="flex flex-col items-center gap-5 py-14">
         <h1 className="text-4xl lap:text-6xl text-sky-400 font-Fira_Sans_Condensed font-bold">
           MAKE A DIFFERENCE
