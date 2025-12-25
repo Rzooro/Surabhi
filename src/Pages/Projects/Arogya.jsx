@@ -44,7 +44,7 @@ const Arogya = () => {
   return (
     <>
       <div
-        className={`mt-[4rem] lap:mt-[5.1rem] bg-cover flex flex-col justify-center h-[24rem] ap:h-[32rem]`}
+        className={`mt-[4rem] lap:mt-[5.1rem] bg-cover flex flex-col justify-center h-[24rem] lap:h-[32rem]`}
         style={{
           backgroundImage: `linear-gradient(rgba(255,0,0,0.55), rgba(255,0,0,0.55)), url(${H})`,
         }}>
@@ -53,7 +53,7 @@ const Arogya = () => {
           className={`flex items-center gap-1 z-50 transition-all duration-300 w-full justify-center py-2
              ${
                isFixed
-                 ? `fixed top-0 left-0 rig``ht-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[4rem] lap:translate-y-[5.1rem]" : ""}`
+                 ? `fixed top-0 left-0 right-0 backdrop-blur-sm bg-white bg-opacity-40 ${visible ? "translate-y-[4rem] lap:translate-y-[5.1rem]" : ""}`
                  : ""
              }`}>
           <div className="h-0.5 bg-green-500 w-2/3"></div>
