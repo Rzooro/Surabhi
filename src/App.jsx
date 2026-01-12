@@ -1,5 +1,5 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import {
   Arogya,
   Ashraya,
@@ -22,6 +22,7 @@ import {
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,7 +39,7 @@ const App = () => {
         <Route path="grama" element={<Grama />} />
         <Route path="saniha" element={<Saniha />} />
         <Route path="volunteer-or-intern" element={<VolunteerOrIntern />} />
-        <Route path="individual-0r-corporate" element={<IndOrCorporate />} />
+        <Route path="individual-or-corporate" element={<IndOrCorporate />} />
         <Route path="contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />

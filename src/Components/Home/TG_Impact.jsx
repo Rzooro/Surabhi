@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMale, FaFemale } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import b1 from "../../assets/SVGS/b1.svg";
@@ -27,14 +26,16 @@ const TG_Impact = () => {
             donaiton or getting involved in other ways.
           </span>
           <div className="flex gap-4 justify-center">
-            <Link to="donate">
-              <button className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 duration-200">
-                Make a Donation
-              </button>
+            <Link
+              to="donate"
+              className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 duration-200">
+              Make a Donation
             </Link>
-            <button className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 duration-200">
+            <Link
+              to="individual-or-corporate"
+              className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 duration-200">
               Get Involved
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-5 bg-pink-600 rounded-2xl place-self-center mob:px-2 py-4">
@@ -48,9 +49,11 @@ const TG_Impact = () => {
             Join our network of partners and help make our initiatives a
             reality.
           </span>
-          <button className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 w-fit place-self-center mt-2 duration-200">
+          <Link
+            to="individual-or-corporate"
+            className="bg-white rounded-lg px-3 py-2 font-Kanit lap:hover:bg-gray-200 w-fit place-self-center mt-2 duration-200">
             Become a Partner
-          </button>
+          </Link>
         </div>
       </div>
     </div>

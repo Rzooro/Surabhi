@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdMedicalServices } from "react-icons/md";
 import {
   FaBookOpen,
@@ -15,6 +16,8 @@ const SmallProjects = () => {
       <h1 className="text-5xl my-2 font-Oswald font-bold text-center tracking-tight">
         OUR PROJECTS
       </h1>
+
+      {/* Hongirana */}
       <div className="flex relative shadow-xl gap-4 overflow-hidden flex-col border border-gray-200 place-self-center items-center rounded-xl px-4 py-2">
         <div className="absolute -z-10 -top-14 -right-14 bg-yellow-400 size-32 rounded-[50%]"></div>
         <LuSchool className="size-20" />
@@ -24,11 +27,15 @@ const SmallProjects = () => {
         <p className="w-52 text-center">
           A lifeline for underpriveleged children
         </p>
-        <button className="rounded-lg px-2 py-1 font-Kanit bg-yellow-400">
+        <Link
+          to="/hongirana"
+          className="rounded-lg px-2 py-1 font-Kanit bg-yellow-400">
           Know More
-        </button>
+        </Link>
       </div>
+
       <div className="flex flex-col tab:flex-row justify-center gap-5">
+        {/* Ashraya */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-sky-800 size-32 rounded-[50%]"></div>
           <FaPersonShelter className="size-14" />
@@ -38,10 +45,14 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             Offers solace and support to homeless
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-sky-800">
+          <Link
+            to="/ashraya"
+            className="rounded-lg py-1 font-Kanit px-2 bg-sky-800 text-white">
             Know More
-          </button>
+          </Link>
         </div>
+
+        {/* Hasiru */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-lime-600 size-32 rounded-[50%]"></div>
           <FaSeedling className="size-14" />
@@ -51,12 +62,16 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             Environmental conservation and promotion of awareness
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-lime-600">
+          <Link
+            to="/hasiru"
+            className="rounded-lg py-1 font-Kanit px-2 bg-lime-600 text-white">
             Know More
-          </button>
+          </Link>
         </div>
       </div>
+
       <div className="flex flex-col tab:flex-row justify-center gap-5">
+        {/* Arogya */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-red-700 size-32 rounded-[50%]"></div>
           <MdMedicalServices className="size-14" />
@@ -66,10 +81,14 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             Provides healthcare solutions to those in need
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-red-700">
+          <Link
+            to="/arogya"
+            className="rounded-lg py-1 font-Kanit px-2 bg-red-700 text-white">
             Know More
-          </button>
+          </Link>
         </div>
+
+        {/* Saniha */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-amber-600 size-32 rounded-[50%]"></div>
           <FaChildReaching className="size-14" />
@@ -79,12 +98,16 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             School outreach program to help government schools
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-amber-600">
+          <Link
+            to="/saniha"
+            className="rounded-lg py-1 font-Kanit px-2 bg-amber-600 text-white">
             Know More
-          </button>
+          </Link>
         </div>
       </div>
+
       <div className="flex flex-col tab:flex-row justify-center gap-5">
+        {/* Vidya */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-rose-600 size-32 rounded-[50%]"></div>
           <FaBookOpen className="size-14" />
@@ -94,10 +117,14 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             Financial assistance for needy meritorious students
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-rose-600">
+          <Link
+            to="/vidya"
+            className="rounded-lg py-1 font-Kanit px-2 bg-rose-600 text-white">
             Know More
-          </button>
+          </Link>
         </div>
+
+        {/* Grama */}
         <div className="flex relative shadow-xl place-self-center overflow-hidden items-center px-4 py-2 flex-col border border-gray-200 rounded-xl gap-4">
           <div className="absolute -z-10 -top-14 -right-14 bg-sky-400 size-32 rounded-[50%]"></div>
           <GiVillage className="size-14" />
@@ -107,9 +134,11 @@ const SmallProjects = () => {
           <p className="w-52 text-center">
             Holistic development of villages by addressing fundamental needs
           </p>
-          <button className="rounded-lg py-1 font-Kanit px-2 bg-sky-400">
+          <Link
+            to="/grama"
+            className="rounded-lg py-1 font-Kanit px-2 bg-sky-400">
             Know More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

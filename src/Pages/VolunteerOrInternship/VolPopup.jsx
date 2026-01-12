@@ -1,23 +1,164 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { CgClose } from "react-icons/cg";
 
-const VolPopup = (props) => {
-  return props.trigger ? (
+const VolPopup = ({ trigger, setTrigger, children }) => {
+  const [isMounted, setIsMounted] = useState(false);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (trigger) {
+      setIsMounted(true);
+
+      // Ensure initial hidden state renders first
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setAnimate(true);
+        });
+      });
+    } else if (isMounted) {
+      setAnimate(false);
+      setTimeout(() => setIsMounted(false), 300);
+    }
+  }, [trigger]);
+
+  // Lock background scroll
+  useEffect(() => {
+    document.body.style.overflow = isMounted ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [isMounted]);
+
+  const closePopup = () => {
+    setTrigger(false);
+    document.activeElement?.blur();
+  };
+
+  if (!isMounted) return null;
+
+  return (
     <div
-      className="fixed top-0 left-0 flex flex-col h-screen w-full justify-center items-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))`,
-      }}>
-      <div className="relative bg-white w-full max-w-[40rem] p-10">
+      className={`
+        fixed inset-0 z-50 flex justify-center pt-[8rem]
+        transition-colors duration-300
+        ${animate ? "bg-black/30" : "bg-black/0"}
+      `}
+      onClick={closePopup}>
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`
+          relative bg-white w-full max-w-[40rem] max-h-[80vh] rounded-2xl
+          transform transition-all duration-300 ease-out flex flex-col
+          ${animate ? "scale-100 opacity-100" : "scale-95 opacity-0"}
+        `}>
         <CgClose
-          className="absolute top-2 right-2 hover:cursor-pointer"
-          onClick={() => props.setTrigger(false)}
+          className="absolute top-4 right-4 text-xl cursor-pointer z-10"
+          onClick={closePopup}
         />
-        {props.children}
+        <div className="px-10 py-8 overflow-y-auto">
+          <form className="flex flex-col gap-5">
+            {/* Heading */}
+            <div className="flex flex-col items-center">
+              <h2 className="text-3xl font-Oswald text-lime-600">
+                Volunteer With Us
+              </h2>
+              <p className="text-gray-500 font-Lato mt-1">
+                Fill in your details and we’ll get in touch with you.
+              </p>
+            </div>
+
+            {/* Full Name */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Full Name
+              </label>
+              <input
+                type="text"
+                placeholder="Your full name"
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                required
+              />
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Email Address
+              </label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                required
+              />
+            </div>
+
+            {/* Phone */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                placeholder="Your phone number"
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                required
+              />
+            </div>
+
+            {/* Area of Interest */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Area of Interest
+              </label>
+              <select
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                required>
+                <option value="">Select an option</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Environment</option>
+                <option>Community Development</option>
+                <option>Fundraising</option>
+              </select>
+            </div>
+
+            {/* Availability */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Availability
+              </label>
+              <select
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                required>
+                <option value="">Select availability</option>
+                <option>Weekends</option>
+                <option>Weekdays</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col gap-1">
+              <label className="font-Lato text-sm text-gray-600">
+                Why do you want to volunteer? (Optional)
+              </label>
+              <textarea
+                rows={3}
+                placeholder="A short message"
+                className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-lime-500 resize-none"
+              />
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              className="bg-lime-600 text-white rounded-lg py-3 font-Kanit
+               hover:bg-lime-700 transition-colors duration-300">
+              Submit Application
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  ) : (
-    ""
   );
 };
 

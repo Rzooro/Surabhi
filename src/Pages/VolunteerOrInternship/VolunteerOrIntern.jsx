@@ -1,7 +1,5 @@
-import { useState, React } from "react";
-import Carousel from "react-multi-carousel";
+import { useState } from "react";
 import VolPopup from "./VolPopup";
-import "react-multi-carousel/lib/styles.css";
 import IntPopup from "./IntPopup";
 
 const VolunteerOrIntern = () => {
@@ -11,10 +9,10 @@ const VolunteerOrIntern = () => {
   return (
     <div className="mt-24 lap:mt-36 mb-20 desk:mt-[10rem] flex flex-col items-center">
       <div className="space-y-10 flex flex-col items-center">
-        <h1 className="lap:text-7xl text-5xl font-bold text-lime-600 font-Oswald tracking-tight text-center">
+        <h1 className="desk:text-9xl lap:text-8xl text-7xl font-bold text-lime-600 font-Oswald tracking-tight text-center">
           MAKE A DIFFERENCE
         </h1>
-        <p className="font-Lato tracking-tight w-[95%] lap:w-[50rem] text-center">
+        <p className="font-Lato desk:text-lg tracking-tight w-[95%] lap:w-[70%] text-center">
           Join the Surabhi Foundation Trust and be a part of positive change in
           diverse communities. We offer a range of volunteer and internship
           opportunities, from working with underprivileged children and

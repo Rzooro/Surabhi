@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Projects.css";
-import Tooltip from "../Tooltip";
 import { MdMedicalServices } from "react-icons/md";
 import {
   FaBookOpen,
@@ -28,6 +28,8 @@ const Projects = () => {
   const [ishoveringBl, setIsHoveringBl] = useState(false);
   const [ishoveringGr, setIsHoveringGr] = useState(false);
   const [ishoveringVi, setIsHoveringVi] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <div className="hidden lap:flex flex-col pt-10 pb-16 relative">
@@ -135,6 +137,7 @@ const Projects = () => {
           <div
             className="group/or cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/saniha")}
             onMouseEnter={() => setIsHoveringOr(true)}
             onMouseLeave={() => setIsHoveringOr(false)}>
             <img
@@ -147,6 +150,7 @@ const Projects = () => {
           <div
             className="group/in cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/ashraya")}
             onMouseEnter={() => setIsHoveringIn(true)}
             onMouseLeave={() => setIsHoveringIn(false)}>
             <img
@@ -159,6 +163,7 @@ const Projects = () => {
           <div
             className="group/re cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/arogya")}
             onMouseEnter={() => setIsHoveringRe(true)}
             onMouseLeave={() => setIsHoveringRe(false)}>
             <img
@@ -171,6 +176,7 @@ const Projects = () => {
           <div
             className="group/ye cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/hongirana")}
             onMouseEnter={() => setIsHoveringYe(true)}
             onMouseLeave={() => setIsHoveringYe(false)}>
             <img
@@ -183,6 +189,7 @@ const Projects = () => {
           <div
             className="group/bl cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/grama")}
             onMouseEnter={() => setIsHoveringBl(true)}
             onMouseLeave={() => setIsHoveringBl(false)}>
             <img
@@ -195,6 +202,7 @@ const Projects = () => {
           <div
             className="group/gr cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/hasiru")}
             onMouseEnter={() => setIsHoveringGr(true)}
             onMouseLeave={() => setIsHoveringGr(false)}>
             <img
@@ -207,6 +215,7 @@ const Projects = () => {
           <div
             className="group/vi cursor-pointer"
             title="Click for More!"
+            onClick={() => navigate("/vidya")}
             onMouseEnter={() => setIsHoveringVi(true)}
             onMouseLeave={() => setIsHoveringVi(false)}>
             <img

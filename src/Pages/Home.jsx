@@ -1,7 +1,5 @@
-import React from "react";
 import {
   Carousel,
-  DonationCard,
   Impact,
   TG_Impact,
   Projects,
